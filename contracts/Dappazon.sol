@@ -11,7 +11,7 @@ contract Dappazon {
    }
 
    modifier onlyOwner {
-      require(msg.sender == owner, "Only owner of this smart contract can perform this operation. ");
+      require(msg.sender == owner, "Only owner of this contract can perform this operation. ");
       _;
    }
 
