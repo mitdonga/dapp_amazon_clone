@@ -57,8 +57,6 @@ describe("Dappazon", () => {
     });
 
     it("Should emit the event", async () => {
-      // expect(Dappazon).to.emit(Dappazon, "List00s")
-
       await expect(Dappazon.list(...Object.values(Product)))
       .to.emit(Dappazon, "List")
       .withArgs(Product.name, Product.price, Product.stock);

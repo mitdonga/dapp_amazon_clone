@@ -71,7 +71,7 @@ contract Dappazon {
       emit BuyOrder(msg.sender, order);
    }
 
-   // Withdraw funds
+   // Withdraw funds for owner
    function withdraw() public onlyOwner {
       (bool success, ) = owner.call{value: address(this).balance}("");
       require(success);
